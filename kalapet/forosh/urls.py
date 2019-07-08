@@ -5,4 +5,5 @@ urlpatterns = [
     path('list', AdvertismentList.as_view()),
     path('detail/<int:pk>/', AdvertismentDetail.as_view()),
     path('product/<str:category>/', ProductList.as_view()),
+    path('product/create', CProductList.as_view()),
 ]

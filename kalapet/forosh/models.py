@@ -15,6 +15,7 @@ class Product(models.Model):
     description = models.TextField()
     supplier = models.CharField(max_length = 200)
     expiration = models.DateField()
+    image = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return "{} : {}".format(self.name, self.cost)
