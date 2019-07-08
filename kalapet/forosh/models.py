@@ -22,3 +22,10 @@ class Product(models.Model):
 
     def __str__(self):
         return "{} : {}".format(self.name, self.cost)
+
+class Vet(models.Model):
+    username = models.CharField(max_length = 200)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.username

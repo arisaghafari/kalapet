@@ -10,3 +10,8 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ('name', 'category', 'cost', 'description', 'supplier', 'expiration', 'image')
+
+class VetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vet
+        fields = ('username', 'description')
