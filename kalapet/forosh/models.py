@@ -10,6 +10,7 @@ class Advertisment(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length = 200)
+    category = models.CharField(max_length=200)
     cost = models.IntegerField()
     description = models.TextField()
     supplier = models.CharField(max_length = 200)
