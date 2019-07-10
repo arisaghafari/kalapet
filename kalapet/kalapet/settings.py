@@ -28,15 +28,13 @@ SECRET_KEY = '*zzs#1#kk8#yg7arv67fgywn*qbj#p!z3lsm&ua&*q)+f$36ec'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arisaghafari.pythonanywhere.com',
-                 '127.0.0.1']
+ALLOWED_HOSTS = ['arisaghafari.pythonanywhere.com','localhost',
+                 '127.0.0.1','172.17.11.10','192.168.1.104']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,6 +60,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
