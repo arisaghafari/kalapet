@@ -1,6 +1,8 @@
 from django.db import models
+from users.models import*
 
 class Advertisment(models.Model):
+    user = models.ManyToManyField(CustomUser)
     title = models.CharField(max_length = 255)
     description = models.TextField()
     image = models.ImageField(upload_to='images/')
@@ -16,8 +18,8 @@ class Product(models.Model):
     category = models.CharField(choices=CATEGORY_CHOICES,max_length=200)
     cost = models.IntegerField()
     description = models.TextField()
-    supplier = models.CharField(max_length = 200)
-    expiration = models.DateField()
+    # supplier = models.CharField(max_length = 200)
+    # expiration = models.DateField()
     image = models.ImageField(upload_to='images/')
 
     def __str__(self):

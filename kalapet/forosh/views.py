@@ -7,6 +7,11 @@ class AdvertismentList(generics.ListCreateAPIView):
     queryset = Advertisment.objects.all()
     serializer_class = AdvertismentSerializer
 
+class meAdd(generics.ListAPIView):
+     serializer_class = AdvertismentSerializer
+     def get_queryset(self):
+       user = self.request.user
+       return Advertisment.objects.filter(user=user)
 
 class AdvertismentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Advertisment.objects.all()
