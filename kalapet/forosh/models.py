@@ -28,6 +28,7 @@ class Product(models.Model):
 class Vet(models.Model):
     username = models.CharField(max_length = 200)
     description = models.TextField()
+    axprofile = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.username

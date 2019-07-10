@@ -14,4 +14,4 @@ class ProductSerializer(serializers.ModelSerializer):
 class VetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vet
-        fields = ('username', 'description')
+        fields = ('username', 'description', 'axprofile')
