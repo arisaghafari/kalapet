@@ -28,7 +28,8 @@ SECRET_KEY = '*zzs#1#kk8#yg7arv67fgywn*qbj#p!z3lsm&ua&*q)+f$36ec'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arisaghafari.pythonanywhere.com','192.168.1.110',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -50,6 +51,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+    'django_filters',
+    'rest_framework_swagger',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -136,3 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}

@@ -9,4 +9,9 @@ class AdvertismentSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ('name', 'cost', 'description', 'supplier', 'expiration')
+        fields = ('name', 'category', 'cost', 'description', 'image')
+
+class VetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vet
+        fields = ('username', 'description', 'axprofile')
